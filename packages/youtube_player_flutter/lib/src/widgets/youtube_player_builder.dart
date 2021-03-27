@@ -16,6 +16,8 @@ class YoutubePlayerBuilder extends StatefulWidget {
 
   /// Callback to notify that the player has exited fullscreen.
   final VoidCallback? onExitFullScreen;
+  /// widet for the email
+  final Widget textAnimation;
 
   /// Builder for [YoutubePlayer] that supports switching between fullscreen and normal mode.
   const YoutubePlayerBuilder({
@@ -24,6 +26,7 @@ class YoutubePlayerBuilder extends StatefulWidget {
     required this.builder,
     this.onEnterFullScreen,
     this.onExitFullScreen,
+    required this.textAnimation,
   }) : super(key: key);
 
   @override
@@ -75,7 +78,18 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
           }
           return true;
         },
-        child: widget.player,
+        child: Stack(children: [
+          widget.player,
+          Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 50),
+            child: Container(
+              height: 50,
+              width: double.infinity,
+              child: widget.textAnimation,
+            ),
+          ),),
+          ]),
       ),
     );
     final child = widget.builder(context, _player);
