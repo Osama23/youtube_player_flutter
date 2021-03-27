@@ -16,6 +16,7 @@ class YoutubePlayerBuilder extends StatefulWidget {
 
   /// Callback to notify that the player has exited fullscreen.
   final VoidCallback? onExitFullScreen;
+
   /// widet for the email
   final Widget textAnimation;
 
@@ -79,17 +80,22 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
           return true;
         },
         child: Stack(children: [
-          widget.player,
           Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 50),
-            child: Container(
-              height: 50,
-              width: double.infinity,
-              child: widget.textAnimation,
+            child: Column(
+              children: [
+                widget.player,
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 50),
+                  child: Container(
+                    height: 50,
+                    width: double.infinity,
+                    child: widget.textAnimation,
+                  ),
+                ),
+              ],
             ),
-          ),),
-          ]),
+          ),
+        ]),
       ),
     );
     final child = widget.builder(context, _player);
