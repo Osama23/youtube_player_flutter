@@ -289,6 +289,10 @@ class _MyHomePageState extends State<MyHomePage> {
                         controller: _controller,
                         color: Colors.blueAccent,
                       ),
+                      FullScreenButton(
+                        controller: _controller,
+                        color: Colors.blueAccent,
+                      ),
                       IconButton(
                         icon: const Icon(Icons.skip_next),
                         onPressed: _isPlayerReady

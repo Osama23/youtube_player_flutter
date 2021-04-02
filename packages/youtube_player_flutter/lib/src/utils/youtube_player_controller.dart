@@ -5,6 +5,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:youtube_player_flutter/src/enums/thumbnail_quality.dart';
 
 import '../enums/playback_rate.dart';
 import '../enums/player_state.dart';
@@ -27,7 +28,7 @@ class YoutubePlayerValue {
     this.volume = 100,
     this.playerState = PlayerState.unknown,
     this.playbackRate = PlaybackRate.normal,
-    this.playbackQuality,
+    this.playbackQuality = ThumbnailQuality.standard,
     this.errorCode = 0,
     this.webViewController,
     this.isDragging = false,
@@ -271,6 +272,9 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
 
   /// Sets the playback speed for the video.
   void setPlaybackRate(double rate) => _callMethod('setPlaybackRate($rate)');
+
+  /// Sets the playback quality for the video.
+  void setPlaybackQuality(String qauilty) => _callMethod('setPlaybackQuality($qauilty)');
 
   /// Toggles the player's full screen mode.
   void toggleFullScreenMode({bool comingValue = false}) {
