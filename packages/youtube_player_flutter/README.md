@@ -131,6 +131,7 @@ YoutubePlayer(
  * RemainingDuration
  * CurrentPosition
  * PlayPauseButton
+ * PlaybackQualityButton
  * PlaybackSpeedButton
  * ProgressBar
 

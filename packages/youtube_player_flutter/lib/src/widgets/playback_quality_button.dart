@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../enums/thumbnail_quality.dart';
 import '../utils/youtube_player_controller.dart';
 
+// ignore: public_member_api_docs
 class PlaybackQualityButton extends StatefulWidget {
   /// Overrides the default [YoutubePlayerController].
   final YoutubePlayerController? controller;
@@ -10,7 +11,7 @@ class PlaybackQualityButton extends StatefulWidget {
   /// Defines icon for the button.
   final Widget? icon;
 
-  /// Creates [PlaybackSpeedButton] widget.
+  /// Creates [PlaybackQualityButton] widget.
   const PlaybackQualityButton({
     this.controller,
     this.icon,
