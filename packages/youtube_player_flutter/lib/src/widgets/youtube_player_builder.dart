@@ -84,15 +84,23 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
             child: Column(
               children: [
                 widget.player,
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 50),
-                  child: Container(
-                    height: 20,
-                    width: double.infinity,
-                    child: widget.textAnimation,
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 50),
+                //   child: Container(
+                //     height: 20,
+                //     width: double.infinity,
+                //     child: widget.textAnimation,
+                //   ),
+                // ),
               ],
+            ),
+          ),
+          Positioned(
+            bottom: 30,
+            child: Container(
+              height: 20,
+              width: double.infinity,
+              child: widget.textAnimation,
             ),
           ),
         ]),
