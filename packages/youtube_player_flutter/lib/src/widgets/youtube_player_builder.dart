@@ -80,20 +80,20 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
           return true;
         },
         child: Stack(children: [
-          Column(
-            children: [
-              widget.player,
-            ],
-          ),
-          Positioned(
-            child: Container(
-                margin: const EdgeInsets.only(top: 40),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
-                height: 50,
-                width: double.infinity,
-                child: widget.textAnimation,
-              ),
+          Center(
+            child: Column(
+              children: [
+                widget.player,
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 50),
+                  child: Container(
+                    height: 20,
+                    width: double.infinity,
+                    child: widget.textAnimation,
+                  ),
+                ),
+              ],
+            ),
           ),
         ]),
       ),
