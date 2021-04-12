@@ -85,14 +85,15 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
               widget.player,
               Container(
                 margin: const EdgeInsets.only(top: 30),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
-                height: 20,
+                // padding:
+                //     const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+                height: 30,
                 width: double.infinity,
                 child: widget.textAnimation,
               ),
             ],
           ),
+          
         ]),
       ),
     );
