@@ -83,12 +83,9 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
           color: Colors.transparent,
           child: InkWell(
             borderRadius: BorderRadius.circular(50.0),
-            onTap: () {
-              print('########## inside youtube player pause is clicked');
-              _controller.value.isPlaying
+            onTap: () => _controller.value.isPlaying
                 ? _controller.pause()
-                : _controller.play();
-            },
+                : _controller.play(),
             child: AnimatedIcon(
               icon: AnimatedIcons.play_pause,
               progress: _animController.view,
